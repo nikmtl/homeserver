@@ -24,35 +24,54 @@
    - unattended-upgrades for critical patches
 
 
-## Phase 2: Cloudflare Tunnel
+## Phase 2: Dokploy
 
-**Objective**: Eliminate public 80/443 exposure for web services
+**Objective**: Install Dokploy before exposing any applications
 
 ### Key Points
 
-- Install cloudflared
-- Create tunnel via Cloudflare dashboard
-- Routes all web traffic through Cloudflare (no inbound listening)
+- Install Dokploy and confirm the dashboard is running locally
+- Keep internal application traffic on HTTP and let Cloudflare handle TLS termination
+- Prepare Dokploy's domain and routing configuration before exposing services
+
+
+### Initial Setup
+
+- One-liner install: `curl -sSL https://dokploy.com/install.sh | sh`
+- Expose the dashboard on port 3000 for local access
+- Configure Dokploy domain settings so later tunnel routes can point to Traefik correctly
+
+
+## Phase 3: Cloudflare Tunnel
+
+**Objective**: Create the outbound-only tunnel after Dokploy is available
+
+### Setup
+
+- Install cloudflared as a Dokploy-managed service
+- Create the tunnel via the Cloudflare dashboard
+- Route traffic through Cloudflare without opening inbound 80/443 ports
+- Use HTTP for internal connections; Cloudflare handles SSL/TLS termination at the edge
 
 
 ### Public Hostnames
 
 | Service      | Domain            | Type                  |
 | ------------ | ----------------- | --------------------- |
-| Dokploy      | dokploy.example.com | HTTP → localhost:3000 |
+| Dokploy      | dokploy.example.com | HTTP → dokploy-traefik:80 |
 | Trek         | trek.example.com    | HTTP → localhost:PORT |
 | Recipe Cloud | recipes.example.com | HTTP → localhost:PORT |
 
 
-## Phase 3: Dokploy
+## Phase 4: Services
 
-**Objective**: Deploy applications via unified Docker interface
+**Objective**: Deploy applications through Dokploy once the tunnel is in place
 
 ### Setup
 
-- One-liner install: `curl -sSL https://dokploy.com/install.sh | sh`
-- Exposes dashboard on port 3000 (proxied through Cloudflare Tunnel)
-- Deploy Trek, Recipe Cloud, Uptime Kuma via UI
+- Deploy Trek, Recipe Cloud, and Uptime Kuma via the Dokploy UI
+- Configure each service to use the domain it should expose through Cloudflare Tunnel
+- Add Pterodactyl only if Minecraft management is needed
 
 ## Phase 5: Restore & Verify
 
@@ -161,14 +180,17 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 - [x] Automatic updates configured
 
 ### Phase 2
+- [ ] Dokploy installed and running
+- [ ] Dokploy dashboard accessible locally
+
+### Phase 3
 - [ ] cloudflared installed + running
 - [ ] Tunnel created + connected
 - [ ] Public hostnames routed
 - [ ] Cloudflare Access enabled on admin UIs
 - [ ] Verified: no direct 80/443 access
 
-### Phase 3
-- [ ] Docker installed
+### Phase 4
 - [ ] Dokploy running on port 3000
 - [ ] Trek deployed
 - [ ] Recipe Cloud deployed
