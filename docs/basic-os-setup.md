@@ -2,7 +2,7 @@
 This document outlines the initial OS setup.
 
 ## OS 
-`Ubuntu Server (minimized) 24.04 LTS` is chosen for its stability, security, and long-term support. The minimal installation reduces the attack surface and resource usage, providing a clean slate for the server setup.
+`Ubuntu Server (minimized) 26.04 LTS` is chosen for its stability, security, and long-term support. The minimal installation reduces the attack surface and resource usage, providing a clean slate for the server setup.
 
 ## SSH 
 
