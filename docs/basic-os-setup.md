@@ -66,4 +66,4 @@ At the moment of this documentation my battery capacity is at a 86.5% (14.05.202
 
 
 ## Further Basic Security Setup 
-See [Fail2ban](./docs/security.md#Fail2Ban), [Automatic Security Updates](./docs/security.md#Automatic+Security+Updates), and [UFW Firewall](./docs/security.md#UFW+Firewall) for details on their setup.
+See [Fail2Ban](./security.md#fail2ban), [Automatic Security Updates](./security.md#automatic-security-updates), and [UFW Firewall](./security.md#ufw-firewall) for details on their setup.
