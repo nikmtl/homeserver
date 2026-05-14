@@ -6,12 +6,12 @@ This document outlines the initial OS setup.
 
 ## SSH 
 
-Conecting to the server is done via SSH on port <ssh-port> with key-based authentication. Root login and password authentication are disabled for security reasons. 
+Connecting to the server is done via SSH on port <ssh-port> with key-based authentication. Root login and password authentication are disabled for security reasons. 
 
 A key pair is generated on the local machine using `ssh-keygen` and the public key is added to the server's `~/.ssh/authorized_keys` file for the non-root sudo user.
 
 ### Connecting
-To connect, i use the following command:
+To connect, I use the following command:
 
 ```bash
 ssh -p <ssh-port> -i ~/.ssh/id_ed25519 [user]@[serverip]
@@ -41,7 +41,7 @@ X11Forwarding no                            # Disable X11 forwarding for securit
 ```
 
 ## Laptop as Server
-As Im using my laptop as a server, there are some additional considerations:
+As I'm using my laptop as a server, there are some additional considerations:
 
 ### Lid Behavior
 The laptop is configured to not suspend or hibernate when the lid is closed:
@@ -61,7 +61,7 @@ STOP_CHARGE_THRESH_BAT0=1
 ```
 > To check battery status and thresholds, use `tlp-stat -b` to see current battery information and charging thresholds.
 
-An other option would be to completely remove the battery and run the laptop on AC power only, but this may not be feasible for all laptop models and can have implications for power stability. 
+Another option would be to completely remove the battery and run the laptop on AC power only, but this may not be feasible for all laptop models and can have implications for power stability. 
 At the moment of this documentation my battery capacity is at a 86.5% (14.05.2026) and I will consider removing the battery if it drops significantly further.
 
 

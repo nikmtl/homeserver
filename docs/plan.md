@@ -1,7 +1,7 @@
 # Implementation Plan
 
 > [!Note]
-> This document is the current plan for implementing the self-hosted homeserver. As i progress through the phases, I will update the document with the current status, any changes to the plan, and notes on the implementation process. This is a living document meant to guide the project from start to finish. This will be removed once the server is fully set up and running.
+> This document is the current plan for implementing the self-hosted homeserver. As I progress through the phases, I will update the document with the current status, any changes to the plan, and notes on the implementation process. This is a living document meant to guide the project from start to finish. This will be removed once the server is fully set up and running.
 
 ## Phase 1: Fresh OS + Hardening
 
