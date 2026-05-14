@@ -152,22 +152,22 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 ## Completion Checklist
 
 ### Phase 1 ✓
-- [ ] Ubuntu 24.04 installed + updated
-- [ ] SSH key-only auth enabled
-- [ ] SSH port changed to <ssh-port>
-- [ ] UFW configured (allows SSH only)
-- [ ] fail2ban running
-- [ ] Non-root user created
-- [ ] Automatic updates configured
+- [x] Ubuntu 24.04 installed + updated
+- [x] SSH key-only auth enabled
+- [x] SSH port changed to <ssh-port>
+- [x] UFW configured (allows SSH only)
+- [x] fail2ban running
+- [x] Non-root user created
+- [x] Automatic updates configured
 
-### Phase 2 ✓
+### Phase 2
 - [ ] cloudflared installed + running
 - [ ] Tunnel created + connected
 - [ ] Public hostnames routed
 - [ ] Cloudflare Access enabled on admin UIs
 - [ ] Verified: no direct 80/443 access
 
-### Phase 3 ✓
+### Phase 3
 - [ ] Docker installed
 - [ ] Dokploy running on port 3000
 - [ ] Trek deployed
@@ -175,7 +175,7 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 - [ ] Uptime Kuma deployed
 - [ ] Services accessible via HTTPS domains
 
-### Phase 5 ✓
+### Phase 5
 - [ ] Trek data restored
 - [ ] DNS updated
 - [ ] DDNS script running (Minecraft only)

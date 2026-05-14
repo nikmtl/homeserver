@@ -1,6 +1,6 @@
 ![banner](assets/readme_banner.png)
 > [!WARNING]
-> At the moment the server is not fully set up and running. See the [plan](./plan.md) for details on the implementation steps and current status.
+> At the moment the server is not fully set up and running. See the [plan](./docs/plan.md) for details on the implementation steps and current status.
 
 This is the documentation for a self-hosted homeserver running own projects, open source web services and applications with security-first architecture using Cloudflare Tunnel and Dokploy.
 
@@ -21,6 +21,6 @@ All other services are managed by Dokploy and will be listed here once deployed.
 
 | Document       | Description                            | Link |
 | -------------- | -------------------------------------- | ---- |
-| Basic OS Setup | User management, initial configuration | ---- |
-| Security       | fail2ban, unattended upgrades, etc.    | ---- |
-| Networking     | SSH, UFW                               |      |
+| Basic OS Setup | User management, initial configuration | [docs/basic-os-setup.md](./docs/basic-os-setup.md) |
+| Security       | fail2ban, unattended upgrades, etc.    | [docs/security.md](./docs/security.md) |
+| Networking     | SSH, UFW                               |  |
