@@ -4,6 +4,9 @@ This document outlines the initial OS setup.
 ## OS 
 `Ubuntu Server (minimized) 26.04 LTS` is chosen for its stability, security, and long-term support. The minimal installation reduces the attack surface and resource usage, providing a clean slate for the server setup.
 
+### User Management
+A non-root user with sudo privileges is created for daily administration tasks. This enhances security by preventing direct root access and allows for better control over permissions.
+
 ## SSH 
 
 Connecting to the server is done via SSH on port <ssh-port> with key-based authentication. Root login and password authentication are disabled for security reasons. 
