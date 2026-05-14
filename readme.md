@@ -7,7 +7,7 @@ This is the documentation for a self-hosted homeserver running own projects, ope
 A Minecraft server may also be hosted on the same machine in the future.
 
 > [!NOTE]
-> This is a personal project for self-hosting web applications. The documentation is primarily for my own reference but may be useful to others interested in similar setups. If you have experience with self-hosting, Cloudflare Tunnel, or Dokploy, please feel free to share your insights by creating an issue. 
+> This is a personal project for self-hosting web applications. The documentation is primarily for my own reference but may be useful to others interested in similar setups. If you have experience with self-hosting, Cloudflare Tunnel, or Dokploy, please feel free to share your insights by [creating an issue](https://github.com/nikmtl/homeserver/issues/new/choose). 
 > If you have a security concern see [security](./security.md).
 
 ## Services
