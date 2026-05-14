@@ -11,11 +11,11 @@ A Minecraft server may also be hosted on the same machine in the future.
 > If you have a security concern see [security](./security.md).
 
 ## Services
-| Service | Description                       | Status       | Location                           |
-| ------- | --------------------------------- | ------------ | ---------------------------------- |
-| Dokploy | Docker-based deployment dashboard | Not Deployed | dash.example.com (Cloudflare Tunnel) |
+| Service                               | Description                       | Status       | Location                           | Port |
+| ------------------------------------- | --------------------------------- | ------------ | ---------------------------------- | ---- |
+| [Dokploy](./docs/services/dokploy.md) | Docker-based deployment dashboard | Not Deployed | dash.example.com (Cloudflare Tunnel) | 3000 |
 
-All other services are managed by Dokploy and will be listed here once deployed.
+All other services are managed by Dokploy and will be listed under the Dokploy section once deployed.
 
 ## Further Documentation
 
@@ -23,4 +23,4 @@ All other services are managed by Dokploy and will be listed here once deployed.
 | -------------- | ---------------------------------- | -------------------------------------------------- |
 | Basic OS Setup | Basic setup like OS and SSH        | [docs/basic-os-setup.md](./docs/basic-os-setup.md) |
 | Security       | Security measures                  | [docs/security.md](./docs/security.md)             |
-| Cloudflare     | All settings related to Cloudflare |                                                    |
+| Cloudflare     | All settings related to Cloudflare | [docs/cloudflare.md](./docs/cloudflare.md)         |

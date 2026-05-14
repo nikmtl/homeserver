@@ -180,8 +180,8 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 - [x] Automatic updates configured
 
 ### Phase 2
-- [ ] Dokploy installed and running
-- [ ] Dokploy dashboard accessible locally
+- [x] Dokploy installed and running
+- [x] Dokploy dashboard accessible locally
 
 ### Phase 3
 - [ ] cloudflared installed + running

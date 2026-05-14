@@ -10,6 +10,7 @@ The Uncomplicated Firewall (UFW) is configured to allow only SSH traffic on port
 | Allow | <ssh-port> | tcp      | ssh                                           |
 | Allow | 80   | tcp      | HTTP (Temporary for Cloudflare Tunnel setup)  |
 | Allow | 443  | tcp      | HTTPS (Temporary for Cloudflare Tunnel setup) |
+| Allow | 3000 | tcp      | Dokploy (Temporary for Cloudflare Tunnel setup) |
 
 Default policy is set to deny all incoming connections and allow all outgoing connections.
 
