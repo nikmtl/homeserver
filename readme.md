@@ -19,8 +19,8 @@ All other services are managed by Dokploy and will be listed here once deployed.
 
 ## Further Documentation
 
-| Document       | Description                            | Link |
-| -------------- | -------------------------------------- | ---- |
-| Basic OS Setup | User management, initial configuration | [docs/basic-os-setup.md](./docs/basic-os-setup.md) |
-| Security       | fail2ban, unattended upgrades, etc.    | [docs/security.md](./docs/security.md) |
-| Networking     | SSH, UFW                               |  |
+| Document       | Description                        | Link                                               |
+| -------------- | ---------------------------------- | -------------------------------------------------- |
+| Basic OS Setup | Basic setup like OS and SSH        | [docs/basic-os-setup.md](./docs/basic-os-setup.md) |
+| Security       | Security measures                  | [docs/security.md](./docs/security.md)             |
+| Cloudflare     | All settings related to Cloudflare |                                                    |

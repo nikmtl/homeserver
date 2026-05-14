@@ -188,6 +188,6 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 
 - **Cloudflare Tunnel Docs**: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/
 - **Dokploy**: https://dokploy.io
-- **Pterodactyl**: https://pterodactyl.io
+  - Dokploy Cloudflare Tunnels Guide: https://docs.dokploy.com/docs/core/guides/cloudflare-tunnels
 - **Ubuntu Security**: https://wiki.ubuntu.com/Security
 - **Docker Security**: https://docs.docker.com/engine/security/
