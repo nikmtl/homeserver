@@ -5,12 +5,9 @@ This document outlines the security measures implemented for the server setup.
 The Uncomplicated Firewall (UFW) is configured to allow only SSH traffic on port <ssh-port> and deny all other incoming connections by default. This helps to protect the server from unauthorized access while still allowing secure remote management.
 
 **UFW Configuration:**
-| Type  | Port | Protocol | Note/Service                                  |
-| ----- | ---- | -------- | --------------------------------------------- |
-| Allow | <ssh-port> | tcp      | ssh                                           |
-| Allow | 80   | tcp      | HTTP (Temporary for Cloudflare Tunnel setup)  |
-| Allow | 443  | tcp      | HTTPS (Temporary for Cloudflare Tunnel setup) |
-| Allow | 3000 | tcp      | Dokploy (Temporary for Cloudflare Tunnel setup) |
+| Type  | Port | Protocol | Note/Service |
+| ----- | ---- | -------- | ------------ |
+| Allow | <ssh-port> | tcp      | ssh          |
 
 Default policy is set to deny all incoming connections and allow all outgoing connections.
 
@@ -28,6 +25,7 @@ Fail2Ban is installed and configured to monitor SSH login attempts.
 The following configuration is applied to the SSH jail under `/etc/fail2ban/jail.local` to protect against brute-force attacks:
 ``` 
 [sshd]
+mode = aggressive
 enabled = true
 port = <ssh-port>
 maxretry = 5
@@ -50,3 +48,8 @@ Automatic security updates are enabled to ensure the system is always up-to-date
 sudo apt install unattended-upgrades -y
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
+
+## Exposing Services with Cloudflare Tunnel
+To securely expose internal services to the internet without opening ports on the server, Cloudflare Tunnel is used. This creates an encrypted tunnel between the local server and Cloudflare's network. 
+
+For more details on the Cloudflare Tunnel configuration, how the routing with the Tunnel and Reverse Proxy works, see the [Cloudflare setup documentation](/docs/cloudflare.md).

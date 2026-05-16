@@ -56,11 +56,11 @@
 
 ### Public Hostnames
 
-| Service      | Domain            | Type                  |
-| ------------ | ----------------- | --------------------- |
+| Service      | Domain            | Type                      |
+| ------------ | ----------------- | ------------------------- |
 | Dokploy      | dokploy.example.com | HTTP → dokploy-traefik:80 |
-| Trek         | trek.example.com    | HTTP → localhost:PORT |
-| Recipe Cloud | recipes.example.com | HTTP → localhost:PORT |
+| Trek         | trek.example.com    | HTTP → localhost:PORT     |
+| Recipe Cloud | recipes.example.com | HTTP → localhost:PORT     |
 
 
 ## Phase 4: Services
@@ -184,22 +184,22 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 - [x] Dokploy dashboard accessible locally
 
 ### Phase 3
-- [ ] cloudflared installed + running
-- [ ] Tunnel created + connected
-- [ ] Public hostnames routed
+- [x] cloudflared installed + running
+- [x] Tunnel created + connected
+- [x] Public hostnames routed
 - [ ] Cloudflare Access enabled on admin UIs
-- [ ] Verified: no direct 80/443 access
+- [x] Verified: no direct 80/443 access
 
 ### Phase 4
-- [ ] Dokploy running on port 3000
+- [x] Dokploy running on port 3000
 - [ ] Trek deployed
 - [ ] Recipe Cloud deployed
 - [ ] Uptime Kuma deployed
-- [ ] Services accessible via HTTPS domains
+- [x] Services accessible via HTTPS domains
 
 ### Phase 5
 - [ ] Trek data restored
-- [ ] DNS updated
+- [x] DNS updated
 - [ ] DDNS script running (Minecraft only)
 - [ ] All services verified accessible
 - [ ] Backups configured + tested

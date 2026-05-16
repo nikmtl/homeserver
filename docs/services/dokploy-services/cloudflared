@@ -1,0 +1,26 @@
+# Service – Cloudflared
+Cloudflared is a client for Cloudflare Tunnel, which allows to securely expose local services to the internet without opening ports on the router. It creates an encrypted tunnel between the local server and Cloudflare's network, providing secure access to services running on the server from anywhere in the world.
+
+## Setup
+Cloudflared is installed as a service managed by Dokploy.
+
+**General:** \
+Service Type: `Application` \
+Application Name: `cloudflared` \
+Dokploy Path: `Infrastructure/cloudflared` \
+Provider: `Docker` \
+Docker Image: `cloudflare/cloudflared` \
+
+**Environment:** \
+The following environment variable is set for the Cloudflare Tunnel token, which is obtained from the Cloudflare dashboard when creating the tunnel:
+```
+TUNNEL_TOKEN="COULDFLARE-TUNNEL-TOKEN-FROM-CLOUDFLARE-DASHBOARD"
+```
+
+**Advanced → Arguments:**\
+Add `tunnel` and `run` as arguments to start the tunnel when the container runs.
+
+Then the service is deployed and should connect to Cloudflare, allowing access to the services exposed through the tunnel.
+
+> [!NOTE]
+> For more details on the Cloudflare Tunnel configuration, how the routing with the Tunnel and Reverse Proxy works, see the [Cloudflare setup documentation](/docs/cloudflare.md).

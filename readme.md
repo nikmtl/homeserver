@@ -11,9 +11,9 @@ A Minecraft server may also be hosted on the same machine in the future.
 > If you have a security concern see [security](./security.md).
 
 ## Services
-| Service                               | Description                       | Status       | Location                           | Port |
-| ------------------------------------- | --------------------------------- | ------------ | ---------------------------------- | ---- |
-| [Dokploy](./docs/services/dokploy.md) | Docker-based deployment dashboard | Not Deployed | dash.example.com (Cloudflare Tunnel) | 3000 |
+| Service                               | Description                       | Status | Location                           | Port |
+| ------------------------------------- | --------------------------------- | ------ | ---------------------------------- | ---- |
+| [Dokploy](./docs/services/dokploy.md) | Docker-based deployment dashboard | 🟢      | dash.example.com (Cloudflare Tunnel) | 3000 |
 
 All other services are managed by Dokploy and will be listed under the Dokploy section once deployed.
 

@@ -14,23 +14,17 @@ Connecting to the server is done via SSH on port <ssh-port> with key-based authe
 A key pair is generated on the local machine using `ssh-keygen` and the public key is added to the server's `~/.ssh/authorized_keys` file for the non-root sudo user.
 
 ### Connecting
-To connect, I use the following command:
-
-```bash
-ssh -p <ssh-port> -i ~/.ssh/id_ed25519 [user]@[serverip]
-```
-
-To speed up the connection, I have the following configuration in `~/.ssh/config`:
+To connect to the server U use the following configuration in `~/.ssh/config`:
 
 ```
-Host myhomeserver
-    HostName [serverip]
-    User [user]
-    Port <ssh-port>
+Host homeserver
+    HostName [domain-to-ssh.com]
+    User [username]
     IdentityFile ~/.ssh/id_ed25519
+    ProxyCommand cloudflared access ssh --hostname %h
 ```
 
-So I can simply connect with `ssh myhomeserver` without needing to specify the port, user, or key each time.
+This allows for a simplified connection command, `ssh homeserver`, which uses the specified hostname, user, and key without needing to enter them each time. The `ProxyCommand` is used to route the SSH connection through Cloudflare Access for added security.
 
 ### Hardening SSH
 To further harden SSH, the following settings are applied in `/etc/ssh/sshd_config`:
