@@ -24,7 +24,7 @@ Host homeserver
     ProxyCommand cloudflared access ssh --hostname %h
 ```
 
-This allows for a simplified connection command, `ssh homeserver`, which uses the specified hostname, user, and key without needing to enter them each time. The `ProxyCommand` is used to route the SSH connection through Cloudflare Access for added security.
+This allows for a simplified connection command, `ssh homeserver`, which uses the specified hostname, user, and key without needing to enter them each time. The `ProxyCommand` is used to route the SSH connection through Cloudflare Access for added security. For this to work `cloudflared` must be installed on the local machine.
 
 ### Hardening SSH
 To further harden SSH, the following settings are applied in `/etc/ssh/sshd_config`:
