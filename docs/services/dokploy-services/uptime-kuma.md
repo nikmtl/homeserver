@@ -5,10 +5,10 @@
 I am using the template provided by Dokploy for Uptime Kuma: 
 
 **General:** \
-Service Type: `Application` \
+Service Type: `Compose/DockerCompose` \
 Application Name: `uptime-kuma` \
 Dokploy Path: `Infrastructure/uptime-kuma` \
-Provider: `Raw (Docker Compose)` \ 
+Provider: `Raw (Docker Compose)` \
 Domain: `status.example.com`
 
 **Docker Compose:** 
