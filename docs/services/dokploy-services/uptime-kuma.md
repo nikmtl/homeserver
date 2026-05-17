@@ -11,7 +11,7 @@ Dokploy Path: `Infrastructure/uptime-kuma` \
 Provider: `Raw (Docker Compose)` \ 
 Domain: `status.example.com`
 
-**Docker Compose:** \
+**Docker Compose:** 
 ```yaml
 version: "3.8"
 services:
@@ -25,5 +25,3 @@ services:
 volumes:
   uptime-kuma-data:
 ```
-
-## Configuration (In Uptime Kuma)
