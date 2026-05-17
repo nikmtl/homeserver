@@ -22,9 +22,13 @@ As I'm using Cloudflare Tunnel, the protocol is set to HTTP since Cloudflare wil
 ## Essential Services 
 There are some essential services that are set up in Dokploy before exposing any applications:
 
-| Service                                       | Description              | Status |
-| --------------------------------------------- | ------------------------ | ------ |
-| [Cloudflared](./dokploy-services/cloudflared) | Cloudflare Tunnel client | 🟢      |
+| Service                                          | Description              | Status |
+| ------------------------------------------------ | ------------------------ | ------ |
+| [Cloudflared](./dokploy-services/cloudflared.md) | Cloudflare Tunnel client | 🟢      |
 
 ## Custom Services
 Custom services are added to Dokploy as needed, depending on the applications and services wanted to run on the server. Each service is configured with its own settings, such as environment variables, ports, and volumes, to ensure it runs correctly within the Docker environment managed by Dokploy.
+
+| Service                                          | Description     | Status |
+| ------------------------------------------------ | --------------- | ------ |
+| [Uptime Kuma](./dokploy-services/uptime-kuma.md) | Monitoring tool | 🟢      |

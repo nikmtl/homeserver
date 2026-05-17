@@ -192,7 +192,7 @@
 - [x] Dokploy running on port 3000
 - [ ] Trek deployed
 - [ ] Recipe Cloud deployed
-- [ ] Uptime Kuma deployed
+- [x] Uptime Kuma deployed
 - [x] Services accessible via HTTPS domains
 
 ### Phase 5

@@ -1,7 +1,7 @@
 # Service – Cloudflared
 Cloudflared is a client for Cloudflare Tunnel, which allows to securely expose local services to the internet without opening ports on the router. It creates an encrypted tunnel between the local server and Cloudflare's network, providing secure access to services running on the server from anywhere in the world.
 
-## Setup
+## Setup (Through Dokploy)
 Cloudflared is installed as a service managed by Dokploy.
 
 **General:** \
