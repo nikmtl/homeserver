@@ -9,11 +9,14 @@ A Minecraft server may also be hosted on the same machine in the future.
 > [!NOTE]
 > This is a personal project for self-hosting web applications. The documentation is primarily for my own reference but may be useful to others interested in similar setups. If you have experience with self-hosting, Cloudflare Tunnel, or Dokploy, please feel free to share your insights by [creating an issue](https://github.com/nikmtl/homeserver/issues/new/choose). 
 > If you have a security concern see [security](./security.md).
+> [!NOTE]
+> This is a personal project for self-hosting web applications. The documentation is primarily for my own reference but may be useful to others interested in similar setups. If you have experience with self-hosting, Cloudflare Tunnel, or Dokploy, please feel free to share your insights by [creating an issue](https://github.com/nikmtl/homeserver/issues/new/choose).
+> If you have a security concern, see [security](./security.md).
 
 ## Services
 | Service                               | Description                       | Status | Location                           | Port |
 | ------------------------------------- | --------------------------------- | ------ | ---------------------------------- | ---- |
-| [Dokploy](./docs/services/dokploy.md) | Docker-based deployment dashboard | 🟢      | dash.example.com (Cloudflare Tunnel) | 3000 |
+| [Dokploy](./docs/services/dokploy.md) | Docker-based deployment dashboard | 🟢      | dash.example.com (Behind Cloudflare Access) | 3000 |
 
 All other services are managed by Dokploy and will be listed under the Dokploy section once deployed.
 

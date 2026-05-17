@@ -1,5 +1,5 @@
 # Dokploy 
-**Dokploy** is a self-hosted deployment dashboard that allows to manage and deploy Docker containers with ease. It provides a user-friendly interface to monitor and control applications, making it easier to keep track of services and their status. This is the main tool for managing all services on the server, including web applications, databases and other containerized services.
+**Dokploy** is a self-hosted deployment dashboard that allows to manage and deploy Docker containers with ease. It provides a user-friendly interface to monitor and control applications, making it easier to keep track of services and their status. This is the main tool for managing all services on the server, including web applications, databases, and other containerized services.
 
 ## Setup 
 Dokploy is installed using the official installation script provided in their documentation. The installation process involves running a single command that sets up Dokploy and its dependencies.
@@ -7,17 +7,17 @@ Dokploy is installed using the official installation script provided in their do
 ```bash
 curl -fsSL https://dokploy.com/install.sh | sh
 ```
-After installation dokploy runs on `port 3000` and an admin account should be created to access the dashboard. 
+After installation, Dokploy runs on `port 3000` and an admin account should be created to access the dashboard. 
 
-> For me the Timezone was not set correctly by default, so I had to set it manually: 
+> For me the timezone was not set correctly by default, so I had to set it manually:
 > ```bash
->   docker service update --env-add TZ=Europe/Berlin dokploy
+> docker service update --env-add TZ=Europe/Berlin dokploy
 > ```
 
 ## Custom Settings
-After setup of cloudflare tunnel connection the only setting I had to change was the domain for the dashboard. This is done in the Dokploy dashboard under `Settings -> Web Server`. 
+After setting up the Cloudflare Tunnel connection, the only setting I had to change was the domain for the dashboard. This is done in the Dokploy dashboard under `Settings -> Web Server`.
 
-As im using Cloudflare Tunnel the protocol is set to HTTP since Cloudflare will handle SSL/TLS termination at the edge.
+As I'm using Cloudflare Tunnel, the protocol is set to HTTP since Cloudflare will handle SSL/TLS termination at the edge.
 
 ## Essential Services 
 There are some essential services that are set up in Dokploy before exposing any applications:

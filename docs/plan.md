@@ -160,11 +160,9 @@
 ## Minecraft-Specific Decisions
 
 **Why not tunnel Minecraft?**
-- Cloudflare Tunnel doesn't support UDP/game protocols
-- Minecraft uses TCP but Cloudflare Tunnel is HTTP/HTTPS only
-- Direct port forward is only option: TCP 25565-25570
-
-This is why Minecraft is separate for now — it will be exposed directly to the internet, but with strong firewall rules and fail2ban monitoring.
+- Cloudflare Tunnel doesn't support UDP; Bedrock edition uses UDP and cannot be proxied through a standard HTTP tunnel.
+- Java edition uses TCP (default port 25565), but exposing game ports through Cloudflare typically requires Cloudflare Spectrum or an Enterprise feature; for most setups direct port forwarding is the practical option.
+- Therefore Minecraft is handled separately and will be exposed directly to the internet, protected by strict firewall rules and monitoring (fail2ban, port restrictions).
 
 ---
 

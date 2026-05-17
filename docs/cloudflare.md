@@ -45,7 +45,7 @@ Cloudflare Tunnel is set up to securely expose internal services without opening
 - **Tunnel Name**: `homeserver` 
 - **Tunnel Type**: `cloudflared`
 
-After [cloudflared](/docs/services/dokploy-services/cloudflared) is installed on the server and the Tunnel ID is set as a environment variable, the server shows as a connector in the Cloudflare dashboard. The tunnel is configured to start on boot and automatically reconnect if the connection drops.
+After [cloudflared](/docs/services/dokploy-services/cloudflared) is installed on the server and the Tunnel ID is set as an environment variable, the server shows as a connector in the Cloudflare dashboard. The tunnel is configured to start on boot and automatically reconnect if the connection drops.
 
 #### Publish application routes:
 
@@ -72,7 +72,7 @@ All traffic through the wildcard domain `*.example.com` is routed to Traefik, wh
 Cloudflare Access is a service that provides an additional layer of security by requiring users to authenticate through Cloudflare before accessing protected resources.
 
 ### Access Configuration:
-| Name    | Destination    | Access Policy | Type        | Seession Duration |
+| Name    | Destination    | Access Policy | Type        | Session Duration |
 | ------- | -------------- | ------------- | ----------- | ----------------- |
-| Dokploy | dash.example.com | Only me       | Self Hosted | 24h               |
-| SSH     | ssh.example.com  | Only me       | Self Hosted | 24h               |
+| Dokploy | dash.example.com | Only me       | Self-hosted | 24h               |
+| SSH     | ssh.example.com  | Only me       | Self-hosted | 24h               |
