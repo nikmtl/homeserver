@@ -53,3 +53,8 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades
 To securely expose internal services to the internet without opening ports on the server, Cloudflare Tunnel is used. This creates an encrypted tunnel between the local server and Cloudflare's network. 
 
 For more details on the Cloudflare Tunnel configuration, how the routing with the Tunnel and Reverse Proxy works, see the [Cloudflare setup documentation](/docs/cloudflare.md).
+
+## Cloudflare Access
+Cloudflare Access is enabled for all admin UIs (e.g., Dokploy dashboard) to add an additional layer of security. This requires users to authenticate through Cloudflare before accessing the admin interfaces, providing protection against unauthorized access even if the tunnel is exposed.
+
+See the [Cloudflare setup documentation](/docs/cloudflare.md) for details on the Access configuration and policies.

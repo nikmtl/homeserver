@@ -9,7 +9,7 @@ Service Type: `Application` \
 Application Name: `cloudflared` \
 Dokploy Path: `Infrastructure/cloudflared` \
 Provider: `Docker` \
-Docker Image: `cloudflare/cloudflared` \
+Docker Image: `cloudflare/cloudflared` 
 
 **Environment:** \
 The following environment variable is set for the Cloudflare Tunnel token, which is obtained from the Cloudflare dashboard when creating the tunnel:

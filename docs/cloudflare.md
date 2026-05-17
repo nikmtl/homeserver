@@ -67,3 +67,12 @@ All traffic through the wildcard domain `*.example.com` is routed to Traefik, wh
 **Two Routing Options:**
 - **Via Traefik (all subdomains except SSH):** Domain-based routing, multiple apps on one tunnel, Dokploy domain features apply
 - **Direct Container Access (SSH):** Bypasses Traefik, direct tunnel to `<Local-Server-IP>:<ssh-port>`
+
+## Cloudflare Access
+Cloudflare Access is a service that provides an additional layer of security by requiring users to authenticate through Cloudflare before accessing protected resources.
+
+### Access Configuration:
+| Name    | Destination    | Access Policy | Type        | Seession Duration |
+| ------- | -------------- | ------------- | ----------- | ----------------- |
+| Dokploy | dash.example.com | Only me       | Self Hosted | 24h               |
+| SSH     | ssh.example.com  | Only me       | Self Hosted | 24h               |

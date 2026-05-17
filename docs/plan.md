@@ -187,7 +187,7 @@ This is why Minecraft is separate for now — it will be exposed directly to the
 - [x] cloudflared installed + running
 - [x] Tunnel created + connected
 - [x] Public hostnames routed
-- [ ] Cloudflare Access enabled on admin UIs
+- [x] Cloudflare Access enabled on admin UIs
 - [x] Verified: no direct 80/443 access
 
 ### Phase 4
