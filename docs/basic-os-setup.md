@@ -35,6 +35,7 @@ This allows for a simplified connection command, `ssh homeserver`, which uses th
 ### Hardening SSH
 To further harden SSH, the following settings are applied in `/etc/ssh/sshd_config`:
 ```
+UsePAM no                                   # Disable PAM to prevent password authentication fallback
 Port <ssh-port>                                   # Change SSH port to non-standard
 PermitRootLogin no                          # Disable root login
 PasswordAuthentication no                   # Disable password authentication (key-only login)
