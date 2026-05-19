@@ -29,6 +29,7 @@ There are some essential services that are set up in Dokploy before exposing any
 ## Custom Services
 Custom services are added to Dokploy as needed, depending on the applications and services wanted to run on the server. Each service is configured with its own settings, such as environment variables, ports, and volumes, to ensure it runs correctly within the Docker environment managed by Dokploy.
 
-| Service                                          | Description     | Status |
-| ------------------------------------------------ | --------------- | ------ |
-| [Uptime Kuma](./dokploy-services/uptime-kuma.md) | Monitoring tool | 🟢      |
+| Service                                      | Description    | Status |
+| -------------------------------------------- | -------------- | ------ |
+| [Trek](./dokploy-services/trek.md)           | Travel Planner | 🟢      |
+| [Nextcloud](./dokploy-services/nextcloud.md) | Cloud Storage  | 🟢      |

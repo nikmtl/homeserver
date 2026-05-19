@@ -7,6 +7,12 @@ This document outlines the initial OS setup.
 ### User Management
 A non-root user with sudo privileges is created for daily administration tasks. This enhances security by preventing direct root access and allows for better control over permissions.
 
+### Setting Timezone
+The timezone is set to `Europe/Berlin` to ensure that all logs and scheduled tasks are in the correct local time. This is done using the following command:
+```bash
+sudo timedatectl set-timezone Europe/Berlin
+```
+
 ## SSH 
 
 Connecting to the server is done via SSH on port <ssh-port> with key-based authentication. Root login and password authentication are disabled for security reasons.

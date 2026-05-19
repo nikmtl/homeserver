@@ -190,13 +190,13 @@
 
 ### Phase 4
 - [x] Dokploy running on port 3000
-- [ ] Trek deployed
+- [x] Trek deployed
 - [ ] Recipe Cloud deployed
 - [x] Uptime Kuma deployed
 - [x] Services accessible via HTTPS domains
 
 ### Phase 5
-- [ ] Trek data restored
+- [x] Trek data restored
 - [x] DNS updated
 - [ ] DDNS script running (Minecraft only)
 - [ ] All services verified accessible

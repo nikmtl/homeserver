@@ -76,3 +76,8 @@ Cloudflare Access is a service that provides an additional layer of security by 
 | ------- | -------------- | ------------- | ----------- | ----------------- |
 | Dokploy | dash.example.com | Only me       | Self-hosted | 24h               |
 | SSH     | ssh.example.com  | Only me       | Self-hosted | 24h               |
+
+## References
+
+- **Dokploy Cloudflare Tunnels Guide**: https://docs.dokploy.com/docs/core/guides/cloudflare-tunnels
+- **Cloudflare Tunnel Docs**: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/

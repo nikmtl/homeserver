@@ -11,7 +11,7 @@ Dokploy Path: `Infrastructure/cloudflared` \
 Provider: `Docker` \
 Docker Image: `cloudflare/cloudflared` 
 
-**Environment:** \
+**Environment Variables:** \
 The following environment variable is set for the Cloudflare Tunnel token, which is obtained from the Cloudflare dashboard when creating the tunnel:
 ```
 TUNNEL_TOKEN="COULDFLARE-TUNNEL-TOKEN-FROM-CLOUDFLARE-DASHBOARD"
