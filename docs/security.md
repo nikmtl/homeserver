@@ -18,6 +18,25 @@ Default policy is set to deny all incoming connections and allow all outgoing co
 > `sudo ufw default deny incoming` to set default policy \
 > `sudo ufw enable` to activate the firewall
 
+### Docker and UFW
+By default, Docker bypasses UFW by directly modifying iptables rules. This means ports exposed by Docker containers are reachable from the public internet even when UFW is configured to deny all incoming traffic.
+
+[UFW Docker](https://github.com/chaifeng/ufw-docker) patches UFW to properly 
+control Docker traffic, blocking all container ports by default.
+
+**Installation:**
+```
+sudo wget -O /usr/local/bin/ufw-docker \
+  https://github.com/chaifeng/ufw-docker/raw/master/ufw-docker
+sudo chmod +x /usr/local/bin/ufw-docker
+sudo ufw-docker install
+sudo systemctl restart ufw
+```
+
+All Docker ports are blocked by default after installation. Since all inbound 
+traffic is routed through Cloudflare Tunnel (outbound connection), no additional 
+`ufw-docker allow` rules are needed.
+
 
 ## Fail2Ban
 Fail2Ban is installed and configured to monitor SSH login attempts. 
