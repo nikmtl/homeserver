@@ -1,6 +1,4 @@
 ![banner](assets/readme_banner.png)
-> [!WARNING]
-> At the moment the server is not fully set up and running. See the [plan](./docs/plan.md) for details on the implementation steps and current status.
 
 This is the documentation for a self-hosted homeserver running own projects, open source web services and applications with security-first architecture using Cloudflare Tunnel and Dokploy.
 
