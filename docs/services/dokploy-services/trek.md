@@ -1,6 +1,8 @@
 # Service – Trek 
 **Trek** is a travel planner application that allows to organize and plan trips, including itinerary management, packing lists, and travel documentation.
 
+See the [Trek GitHub repository](https://github.com/mauriceboe/TREK) for more information about the application, its features, and configuration options.
+
 ## Setup (Through Dokploy)
 Trek is deployed as a custom service in Dokploy.
 
