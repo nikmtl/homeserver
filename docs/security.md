@@ -49,6 +49,9 @@ sudo apt install unattended-upgrades -y
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 
+## SSH Hardening
+See the [Basic OS Setup documentation](./basic-os-setup.md#ssh) for details on the SSH hardening configuration, including changing the default port, disabling root login, and enforcing key-based authentication.
+
 ## Exposing Services with Cloudflare Tunnel
 To securely expose internal services to the internet without opening ports on the server, Cloudflare Tunnel is used. This creates an encrypted tunnel between the local server and Cloudflare's network. 
 
