@@ -66,8 +66,7 @@ STOP_CHARGE_THRESH_BAT0=1
 > To check battery status and thresholds, use `tlp-stat -b` to see current battery information and charging thresholds.
 
 Another option would be to completely remove the battery and run the laptop on AC power only, but this may not be feasible for all laptop models and can have implications for power stability. 
-At the moment of this documentation my battery capacity is at 86.5% (14.05.2026) and I will consider removing the battery if it drops significantly further.
-
+For my own reference, I will [track the battery health](battery.md) over time to see if it degrades significantly.
 
 ## Further Basic Security Setup 
 See [Fail2Ban](./security.md#fail2ban), [Automatic Security Updates](./security.md#automatic-security-updates), and [UFW Firewall](./security.md#ufw-firewall) for details on their setup.
