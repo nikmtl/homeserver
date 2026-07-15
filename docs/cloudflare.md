@@ -33,6 +33,11 @@ _Cloudflare Dashboard → your domain → SSL/TLS → Overview_
 **SSL/TLS Encryption Mode**: `Full` \
 This ensures that Cloudflare connects to the server using a secure connection, and the server must have a valid SSL certificate.
 
+
+**SSL/TLS Edge Certificates → Always Use HTTPS**: `Enabled` \
+This setting ensures that all HTTP requests are redirected to HTTPS, providing a secure connection for all traffic
+
+
 ## Cloudflare Tunnel
 _Zero Trust -> Network -> Connections_
 
