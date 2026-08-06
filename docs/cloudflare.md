@@ -2,7 +2,7 @@
 This document outlines all the configuration of Cloudflare and how Cloudflare Tunnel integrates with the server setup. It covers the domain setup, DNS records, tunnel configuration, and how the routing works with the Traefik reverse proxy to expose internal services to the internet.
 
 ## Domain Setup
-The domain `example.com` is managed by Cloudflare and is used for all public-facing services. 
+The domain `example.com` and `example.dev` is managed by Cloudflare and is used for all public-facing services. 
 
 ### DNS Record
 _Cloudflare Dashboard → your domain → DNS → Records_
@@ -14,9 +14,9 @@ Content: `<tunnel-id>.cfargotunnel.com` \
 TTL: `Auto` \
 Proxy status: `Proxied` 
 
-This wildcard record ensures that all subdomains of `example.com` are routed through the Cloudflare Tunnel, allowing for flexible service exposure without needing to create individual DNS records for each service. See [Routing with Cloudflare Tunnel and Traefik Reverse Proxy](#routing-with-cloudflare-tunnel-and-traefik-reverse-proxy) for how this integrates with the Traefik reverse proxy to route traffic to the appropriate internal services based on the subdomain.
+This wildcard record ensures that all subdomains of `example.com` and `example.dev` are routed through the Cloudflare Tunnel, allowing for flexible service exposure without needing to create individual DNS records for each service. See [Routing with Cloudflare Tunnel and Traefik Reverse Proxy](#routing-with-cloudflare-tunnel-and-traefik-reverse-proxy) for how this integrates with the Traefik reverse proxy to route traffic to the appropriate internal services based on the subdomain.
 
-**Specific SSH Subdomain Record** \
+**Specific SSH Subdomain Record (example.com only)** \
 Type: `CNAME` / `Tunnel` \
 Name: `ssh` \
 Content: `<tunnel-id>.cfargotunnel.com` \
@@ -56,12 +56,13 @@ After [cloudflared](/docs/services/dokploy-services/cloudflared.md) is installed
 
 - **SSH**: `ssh.example.com` → `<Local-Server-IP>:<ssh-port>` (bypasses Traefik for SSH access)
 - **Traefik**: `*.example.com` →  `dokploy-traefik:80` (routes all other subdomains to Traefik)
+- **Traefik**: `*.example.dev` →  `dokploy-traefik:80` (routes all other subdomains to Traefik)
 
 Traffic flow: Cloudflare → Tunnel → Traefik → Services on Dokploy
 
 ### Routing with Cloudflare Tunnel and Traefik Reverse Proxy
 
-All traffic through the wildcard domain `*.example.com` is routed to Traefik, which forwards requests to individual services based on the domain configured in Dokploy.
+All traffic through the wildcard domain `*.example.com` and `*.example.dev` is routed to Traefik, which forwards requests to individual services based on the domain configured in Dokploy.
 
 **Routing Flow:**
 1. Request arrives at `app.example.com`
