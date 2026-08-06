@@ -38,6 +38,7 @@ services:
       - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
       - APP_URL=${APP_URL}
       - TRUST_PROXY=1
+      - COOKIE_SECURE=false
     volumes:
       - trek-data:/app/data
       - trek-uploads:/app/uploads
@@ -61,3 +62,6 @@ APP_URL=https://trek.example.com
 ALLOWED_ORIGINS=https://trek.example.com
 TZ=Europe/Berlin
 ```
+
+> [!NOTE]
+> `COOKIE_SECURE=false` is required because Cloudflare Tunnel terminates TLS at the edge — Traefik and Trek only ever see plain HTTP internally. Without it, the session cookie's `Secure` flag causes login to fail with "Access token required". Safe here since the full path (browser↔Cloudflare via TLS, Cloudflare↔server via the tunnel's own encryption) is already encrypted.
