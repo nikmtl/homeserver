@@ -29,7 +29,10 @@ There are some essential services that are set up in Dokploy before exposing any
 ## Custom Services
 Custom services are added to Dokploy as needed, depending on the applications and services wanted to run on the server. Each service is configured with its own settings, such as environment variables, ports, and volumes, to ensure it runs correctly within the Docker environment managed by Dokploy.
 
-| Service                                      | Description    | Status |
-| -------------------------------------------- | -------------- | ------ |
-| [Trek](./dokploy-services/trek.md)           | Travel Planner | 🟢      |
-| [Nextcloud](./dokploy-services/nextcloud.md) | Cloud Storage  | 🟢      |
+| Service                                      | Description    | Status | Type |
+| -------------------------------------------- | -------------- | ------ | ------ |
+| [Trek](./dokploy-services/trek.md)           | Travel Planner | 🟢      | Open Source App |
+| [Nextcloud](./dokploy-services/nextcloud.md) | Cloud Storage  | 🟢      | Open Source App |
+| [Norish](./dokploy-services/norish.md)       | Recipe Manager | 🟢      | Open Source App |
+
+And more services not listed here, such as self-developed and university projects.
