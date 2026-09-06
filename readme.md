@@ -22,3 +22,4 @@ All other services are managed by Dokploy and are listed under the [Dokploy sect
 | Basic OS Setup | Basic setup like OS and SSH        | [docs/basic-os-setup.md](./docs/basic-os-setup.md) |
 | Security       | Security measures                  | [docs/security.md](./docs/security.md)             |
 | Cloudflare     | All settings related to Cloudflare | [docs/cloudflare.md](./docs/cloudflare.md)         |
+| Email Notifications | Maileroo SMTP relay used by Dokploy, Trek and Nextcloud | [docs/services/email-notifications.md](./docs/services/email-notifications.md) |

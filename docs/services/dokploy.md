@@ -19,6 +19,10 @@ After setting up the Cloudflare Tunnel connection, the only setting I had to cha
 
 As I'm using Cloudflare Tunnel, the protocol is set to HTTP since Cloudflare will handle SSL/TLS termination at the edge.
 
+## Notifications
+Dokploy sends deployment and build-failure notifications by email through the shared Maileroo
+SMTP relay. See [Email Notifications](./email-notifications.md).
+
 ## Essential Services 
 There are some essential services that are set up in Dokploy before exposing any applications:
 

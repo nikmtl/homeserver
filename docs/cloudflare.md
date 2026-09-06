@@ -2,7 +2,7 @@
 This document outlines all the configuration of Cloudflare and how Cloudflare Tunnel integrates with the server setup. It covers the domain setup, DNS records, tunnel configuration, and how the routing works with the Traefik reverse proxy to expose internal services to the internet.
 
 ## Domain Setup
-The domain `example.com` and `example.dev` is managed by Cloudflare and is used for all public-facing services. 
+The domains `example.com` and `example.dev` is managed by Cloudflare and is used for all public-facing services. 
 
 ### DNS Record
 _Cloudflare Dashboard → your domain → DNS → Records_
@@ -26,6 +26,9 @@ Proxy status: `Proxied`
 SSH has its own subdomain to bypass the Traefik reverse proxy and route directly to the server.
 
 > To get the tunnel ID: _Zero Trust → Networks → Connectors → click your tunnel → copy the ID from the URL or the tunnel details_
+
+**Maileroo Sending Domain Record** \
+DNS records for the sending domain are managed by Maileroo’s Cloudflare integration.
 
 ### SSL/TLS Settings
 _Cloudflare Dashboard → your domain → SSL/TLS → Overview_
